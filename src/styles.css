@@ -1,0 +1,103 @@
+h1 {
+  padding-top: 15px;
+}
+
+h2 {
+  text-align: center;
+  color: #56a9d0;
+  font-size: 80px;
+}
+
+h3 {
+  text-align: center;
+  font-size: 50px;
+  color: #56a9d0;
+}
+
+h5 {
+  text-align: center;
+}
+
+a {
+  padding: 10px;
+}
+
+footer {
+  padding-top: 60px;
+}
+
+input {
+  border: 1px solid #41729f;
+  border-radius: 30px;
+  background-color: #41729f;
+  color: whitesmoke;
+  box-shadow: rgba(37, 39, 89, 50%) 0px 8px 8px 0px;
+  transition: all 200ms ease-in-out;
+  font-size: 16px;
+  padding: 5px 15px;
+}
+
+button {
+  border: rgba(245, 245, 245, 0.01);
+  background-color: rgba(245, 245, 245, 0.01);
+  color: #41729f;
+  transition: all 200ms ease-in-out;
+  font-size: 16px;
+  padding: 5px 15px;
+}
+
+.todaysStats {
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+.temperature {
+  padding-bottom: 30px;
+  font-size: 30px;
+}
+
+.units {
+  font-size: 20px;
+}
+
+.todaysDate {
+  font-size: 25px;
+}
+
+.header img {
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin: 20px 10px 0px 0px;
+}
+
+.col {
+  text-align: center;
+  padding: 15px;
+}
+
+.container {
+  display: block;
+  margin: 30px auto;
+  max-width: 100%;
+  width: 80%;
+  background-color: rgba(245, 245, 245, 0.75);
+  border-radius: 20px;
+}
+
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.text {
+  position: relative;
+  z-index: 10;
+}
