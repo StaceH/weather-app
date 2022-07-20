@@ -64,11 +64,16 @@ celsiusLink.addEventListener("click", convertToCelsius);
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let todaysTemp = document.querySelector("#todaysStats");
-  todaysTemp.innerHTML = `${temperature}`;
   let h1 = document.querySelector("h1");
-  h1.innerHTML = response.data.name;
   let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+
+  todaysTemp.innerHTML = `${temperature}`;
+  h1.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 // Current Location
