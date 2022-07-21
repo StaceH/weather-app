@@ -62,11 +62,15 @@ let form = document.querySelector("#city");
 
 form.addEventListener("submit", search);
 
+
+
+
 // Conversion  **********
 function convertToFahrenheit(event) {
   event.preventDefault();
+  let fahrenheitTemperature = (0°C × 9/5) + 32;
   let temperatureElement = document.querySelector("#todaysStats");
-  temperatureElement.innerHTML = 93;
+  temperatureElement.innerHTML = fahrenheitTemperature;
 }
 
 function convertToCelsius(event) {
@@ -78,8 +82,12 @@ function convertToCelsius(event) {
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
+//let celsiusLink = document.querySelector("#celsius-link");
+//celsiusLink.addEventListener("click", convertToCelsius);
+
+
+
+
 
 // search function
 function search(event) {
