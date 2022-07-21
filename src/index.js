@@ -58,19 +58,6 @@ function getPosition(event) {
 let button = document.querySelector("button");
 button.addEventListener("click", getPosition);
 
-// Search City
-function search(event) {
-  event.preventDefault();
-  let searchInput = document.querySelector("#search-text-input");
-  let h1 = document.querySelector("h1");
-  if (searchInput.value) {
-    h1.innerHTML = `${searchInput.value}`;
-  } else {
-    h1.innerHTML = null;
-    alert("Please type a city");
-  }
-}
-
 let form = document.querySelector("#city");
 
 form.addEventListener("submit", search);
@@ -102,12 +89,19 @@ function search(event) {
   let h1 = document.querySelector("h1");
   if (searchInput.value) {
     h1.innerHTML = `${searchInput.value}`;
-    let units = "metric";
-    let apiKey = "db7d2e78c779a2432fadef0082ebe3e7";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${apiKey}&units=${units}`;
-    axios.get(apiUrl).then(showTemperature);
+
+    searchCity(searchInput.value);
   } else {
     h1.innerHTML = null;
     alert("Please type a city");
   }
 }
+
+function searchCity(city) {
+  let units = "metric";
+  let apiKey = "db7d2e78c779a2432fadef0082ebe3e7";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
+searchCity("Barcelona");
