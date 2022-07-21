@@ -73,17 +73,17 @@ function convertToFahrenheit(event) {
 
 let celsiusTemperature = null;
 
-//function convertToCelsius(event) {
-//event.preventDefault();
-//let temperatureElement = document.querySelector("#todaysStats");
-//temperatureElement.innerHTML = 34;
-//}
+function convertToCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#todaysStats");
+  temperatureElement.innerHTML = celsiusTemperature;
+}
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
-//let celsiusLink = document.querySelector("#celsius-link");
-//celsiusLink.addEventListener("click", convertToCelsius);
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
 
 // search function
 function search(event) {
