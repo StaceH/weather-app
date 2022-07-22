@@ -24,6 +24,35 @@ if (currentMinutes < 10) {
 
 today.innerHTML = `${currentDay} ${currentHour}:${currentMinutes}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tues"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="col-2">
+          <div class="forecast-day">${day}</div>
+          <img
+              src="Images/sun-cloud.png"
+              width="40px"
+              height="40px"
+              class="center"
+            />
+            <div class="forecast-temperature">
+                <span class="forecast-temperature-max">31˚</span>
+                <span class="forecast-temperature-min">12˚</span>
+            </div>
+        </div>
+        `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 // Current Temperature
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
@@ -119,3 +148,4 @@ function searchCity(city) {
 }
 
 searchCity("Barcelona");
+displayForecast();
