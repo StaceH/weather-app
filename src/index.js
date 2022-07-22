@@ -78,6 +78,8 @@ let celsiusTemperature = null;
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#todaysStats");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
