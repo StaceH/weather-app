@@ -50,6 +50,7 @@ button {
 ul {
   text-align: left;
   list-style: none;
+  text-transform: capitalize;
 }
 
 .todaysStats {
