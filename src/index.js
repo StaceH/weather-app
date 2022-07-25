@@ -24,7 +24,8 @@ if (currentMinutes < 10) {
 
 today.innerHTML = `${currentDay} ${currentHour}:${currentMinutes}`;
 
-function displayForecast() {
+// 5 day Forecast
+function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -53,6 +54,13 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+// Longitude and Latitude
+function getForecast(coordinates) {
+  let apiKey = "db7d2e78c779a2432fadef0082ebe3e7";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 // Current Temperature
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
@@ -75,6 +83,8 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 // Current Location
@@ -148,4 +158,3 @@ function searchCity(city) {
 }
 
 searchCity("Barcelona");
-displayForecast();
