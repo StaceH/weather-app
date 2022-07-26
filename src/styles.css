@@ -24,11 +24,11 @@ footer {
 }
 
 input {
-  border: 1px solid #41729f;
+  border: 1px solid #1884e8;
   border-radius: 30px;
-  background-color: #41729f;
+  background-color: #1884e8;
   color: whitesmoke;
-  box-shadow: rgba(37, 39, 89, 50%) 0px 8px 8px 0px;
+  box-shadow: rgba(37, 39, 89, 40%) 0px 4px 4px 0px;
   transition: all 200ms ease-in-out;
   font-size: 16px;
   padding: 5px 15px;
@@ -37,7 +37,7 @@ input {
 button {
   border: rgba(245, 245, 245, 0.01);
   background-color: rgba(245, 245, 245, 0.01);
-  color: #41729f;
+  color: #1884e8;
   transition: all 200ms ease-in-out;
   font-size: 16px;
   padding: 5px 15px;
@@ -82,7 +82,7 @@ ul {
   margin: 30px auto;
   max-width: 100%;
   width: 80%;
-  background-color: rgba(245, 245, 245, 0.75);
+  background-color: rgba(176, 227, 251, 0.65);
   border-radius: 20px;
 }
 
@@ -128,4 +128,9 @@ ul {
 
 .forecast-temperature-min {
   opacity: 0.5;
+}
+
+.footer {
+  display: block;
+  text-align: center;
 }
